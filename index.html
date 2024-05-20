@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
         <h1>TODO LIST APP</h1>
-        <ol id="taskList">
-            <li> Beli Sayur </li>
-        </ol>
-        <input id="taskInput"></input>
-        <button onclick="submit()">Submit</button>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
+        <div class="container">
+            <div class="filter">
+                <select id="categorySelect" onchange="getCategory()">
+                    <option value="all">All Category</option>
+                </select>
+            </div>
+
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="module" src="script.js"></script>
+
+    </body>
 </html>
